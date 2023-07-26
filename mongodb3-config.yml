@@ -47,3 +47,14 @@ integrations:
         #     - prefixes:
         #       - "go_"
         #       - "process_"
+    # For multiinstance 
+    - name: nri-mongodb3
+    config:
+      mongodb_cluster_name: my_cluster
+      mongodb_uri: mongodb://username:password@cluster1:27017
+      exporter_port: 9127
+  - name: nri-mongodb3
+    config:
+      mongodb_cluster_name: my_second_cluster
+      mongodb_uri: mongodb://username:password@cluster2:27017
+      exporter_port: 9128
